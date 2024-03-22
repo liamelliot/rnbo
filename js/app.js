@@ -8,7 +8,8 @@ let patcher;
 
 //your p5 stuffs
 function setup() {
-  createCanvas(400, 400);
+  let cnv = createCanvas(400, 400);
+  cnv.touchStarted(myTouchStarted);
   initialSetup();
 }
 
@@ -23,6 +24,18 @@ function draw() {
 }
 
 function mousePressed() {
+  print("hithere");
+ 
+    if (alreadySetup) return;
+    alreadySetup = true;
+    ctx.resume();
+  print("async");
+	console.log("made it to run!")
+
+  setupAudio();
+ 
+}
+function myTouchStarted() {
   print("hithere");
  
     if (alreadySetup) return;
