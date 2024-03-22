@@ -11,10 +11,11 @@ function setup() {
   let cnv = createCanvas(400, 400);
   cnv.touchStarted(myTouchStarted);
   initialSetup();
+  
 }
 
 function draw() {
-  background(220);
+  background(0);
   if(alreadySetup == true){
     device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
     let inputAmp = device.parametersById.get("inputAmp").value
