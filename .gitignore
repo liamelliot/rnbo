@@ -106,4 +106,4 @@ dist
 .tern-port
 
 # Ignore exported files
-export/*.json
+
