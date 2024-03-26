@@ -31,6 +31,7 @@ function draw() {
   }
   device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
   bg = device.parametersById.get("outputBG").value;
+  console.log(device.parametersById.get("test").value);
   //console.log(bg);
   background(Math.floor(bg)*255);
 
