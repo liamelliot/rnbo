@@ -7,7 +7,7 @@ let inconsolata;
 
 // preload fonts
 function preload() {
-  inconsolata = loadFont('assets/inconsolata.otf');
+  inconsolata = loadFont('assets/Inconsolata.otf');
 }
 
 //your p5 stuffs
