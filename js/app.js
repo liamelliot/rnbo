@@ -6,7 +6,7 @@ let patcher;
 
 //your p5 stuffs
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.touchStarted(myTouchStarted);
   initialSetup();
   
