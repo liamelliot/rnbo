@@ -124,13 +124,14 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1309.0, 455.0, 177.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 455.0, 164.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"sendinit" : 1,
 										"displayname" : "",
 										"order" : "0",
 										"preset" : 1,
+										"value" : 0.0,
 										"steps" : 0.0,
 										"ctlin" : 0.0,
 										"tonormalized" : "",
@@ -142,7 +143,7 @@
 										"displayorder" : "-"
 									}
 ,
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "bg",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -530,7 +531,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param bg 0. @min 0. @max 255.",
+									"text" : "param bg @min 0. @max 255.",
 									"varname" : "bg"
 								}
 
@@ -2012,7 +2013,7 @@
 ,
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "message_obj-25",
-									"text" : "0"
+									"text" : "1"
 								}
 
 							}
@@ -3053,7 +3054,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "-1"
+									"text" : "1"
 								}
 
 							}
@@ -7105,7 +7106,7 @@
 							}
 ,
 							"bg" : 							{
-								"value" : 255.0
+								"value" : 17.885554747642004
 							}
 ,
 							"myVal" : 							{
@@ -7136,7 +7137,7 @@
 										}
 ,
 										"bg" : 										{
-											"value" : 255.0
+											"value" : 17.885554747642004
 										}
 ,
 										"myVal" : 										{
