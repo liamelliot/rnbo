@@ -31,7 +31,7 @@ function draw() {
   }
   device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
   bg = device.parametersById.get("outputBG").value;
-  console.log(device.parametersById.get("test").value);
+  //console.log(device.parametersById.get("test").value);
   //console.log(bg);
   background(Math.floor(bg)*255);
 
@@ -81,6 +81,13 @@ async function initialSetup()
 
   device.parametersById.get("up").value = parseFloat(255);
   device.parametersById.get("down").value = parseFloat(0);
+
+  device.parameterChangeEvent.subscribe((param) => {
+    let id = param.id;
+    if(id == "outputBG") {
+      console.log(param.value);
+    }
+  });
 }
 async function setupAudio() 
 {
