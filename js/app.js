@@ -30,7 +30,7 @@ function draw() {
   }
   device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
   let bg = device.parametersById.get("bg").value
-  console.log(Math.floor(bg))
+  console.log(bg)
   background(Math.floor(bg))
 
   textAlign(CENTER, CENTER)
