@@ -17,11 +17,11 @@ function setup() {
   initialSetup();
   
   background(0);
-  textAlign(CENTER, CENTER)
+  textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(96);
-  fill('white')
-  text("Touch to Start", windowWidth/2, windowHeight/2)
+  fill('white');
+  text("Touch to Start", windowWidth/2, windowHeight/2);
 }
 
 function draw() {
@@ -29,17 +29,17 @@ function draw() {
     return;
   }
   device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
-  let bg = device.parametersById.get("bg").value
-  console.log(bg)
-  background(Math.floor(bg))
+  let bg = device.parametersById.get("outputBG").value;
+  console.log(bg);
+  background(Math.floor(bg)*255);
 
-  textAlign(CENTER, CENTER)
+  textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(196);
-  fill('white')
-  text("Listen", windowWidth/2, 98)
-  fill('black')
-  text("Speak", windowWidth/2, windowHeight-98)
+  fill('white');
+  text("Listen", windowWidth/2, 98);
+  fill('black');
+  text("Speak", windowWidth/2, windowHeight-98);
 }
 
 function mousePressed() {
@@ -50,7 +50,7 @@ function mousePressed() {
   alreadySetup = true;
   ctx.resume();
   print("async");
-	console.log("made it to run!")
+	console.log("made it to run!");
 
   setupAudio();
 }
@@ -61,7 +61,7 @@ function myTouchStarted() {
   alreadySetup = true;
   ctx.resume();
   print("async");
-	console.log("made it to run!")
+	console.log("made it to run!");
 
   setupAudio();
 }
@@ -82,10 +82,10 @@ async function setupAudio()
   try {
     // Access user's microphone
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
-    console.log(stream)
+    console.log(stream);
     // Create Media Stream source
     const source = ctx.createMediaStreamSource(stream);
-    console.log(source)
+    console.log(source);
     // Connect source to RNBO Device
     source.connect(device.node);
     
