@@ -25,19 +25,20 @@ function setup() {
 }
 
 function draw() {
-  if(alreadySetup == true){
-    device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
-    let inputAmp = device.parametersById.get("inputAmp").value
-    background(inputAmp * 255)
-
-    textAlign(CENTER, CENTER)
-    textFont(inconsolata);
-    textSize(196);
-    fill('white')
-    text("LISTEN", windowWidth/2, 98)
-    fill('black')
-    text("SPEAK", windowWidth/2, windowHeight-98)
+  if(alreadySetup == false){
+    return;
   }
+  device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
+  let inputAmp = device.parametersById.get("inputAmp").value
+  background(inputAmp * 255)
+
+  textAlign(CENTER, CENTER)
+  textFont(inconsolata);
+  textSize(196);
+  fill('white')
+  text("LISTEN", windowWidth/2, 98)
+  fill('black')
+  text("SPEAK", windowWidth/2, windowHeight-98)
 }
 
 function mousePressed() {
