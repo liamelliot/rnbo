@@ -22,7 +22,7 @@ function draw() {
   }
 
   textAlign(CENTER, CENTER)
-  textSize(32);
+  textSize(96);
   fill('white')
   text("LISTEN", windowWidth/2, 20)
   fill('black')
