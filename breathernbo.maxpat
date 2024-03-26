@@ -567,13 +567,14 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1309.0, 512.0, 70.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 512.0, 96.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"sendinit" : 1,
 										"displayname" : "",
 										"order" : "0",
 										"preset" : 1,
+										"value" : 0.0,
 										"steps" : 0.0,
 										"maximum" : 1.0,
 										"ctlin" : 0.0,
@@ -587,8 +588,8 @@
 										"displayorder" : "-"
 									}
 ,
-									"rnbo_serial" : 1,
-									"rnbo_uniqueid" : "bg",
+									"rnbo_serial" : 6,
+									"rnbo_uniqueid" : "outputBG",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
 										"argnames" : 										{
@@ -975,8 +976,8 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param bg 0.",
-									"varname" : "bg"
+									"text" : "param outputBG",
+									"varname" : "outputBG"
 								}
 
 							}
@@ -4216,7 +4217,7 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 764.0, 569.0, 65.0, 23.0 ],
+									"patching_rect" : [ 758.0, 574.0, 65.0, 23.0 ],
 									"rnbo_classname" : "s",
 									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "s_obj-75",
@@ -7548,14 +7549,14 @@
 							"parsestring" : ""
 						}
 ,
-						"bg" : 						{
-							"label" : "bg",
+						"outputAmp" : 						{
+							"label" : "outputAmp",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"outputAmp" : 						{
-							"label" : "outputAmp",
+						"outputBG" : 						{
+							"label" : "outputBG",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7599,12 +7600,12 @@
 								"value" : 0.0
 							}
 ,
-							"bg" : 							{
-								"value" : 1.0
-							}
-,
 							"myVal" : 							{
 								"value" : 0.0
+							}
+,
+							"outputBG" : 							{
+								"value" : 1.0
 							}
 
 						}
@@ -7630,12 +7631,12 @@
 											"value" : 0.0
 										}
 ,
-										"bg" : 										{
-											"value" : 1.0
-										}
-,
 										"myVal" : 										{
 											"value" : 0.0
+										}
+,
+										"outputBG" : 										{
+											"value" : 1.0
 										}
 
 									}
