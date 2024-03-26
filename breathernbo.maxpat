@@ -124,7 +124,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1309.0, 455.0, 81.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 455.0, 177.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"sendinit" : 1,
@@ -132,7 +132,6 @@
 										"order" : "0",
 										"preset" : 1,
 										"steps" : 0.0,
-										"maximum" : 1.0,
 										"ctlin" : 0.0,
 										"tonormalized" : "",
 										"exponent" : 1.0,
@@ -140,12 +139,11 @@
 										"meta" : "",
 										"fromnormalized" : "",
 										"unit" : "",
-										"minimum" : 0.0,
 										"displayorder" : "-"
 									}
 ,
-									"rnbo_serial" : 1,
-									"rnbo_uniqueid" : "brgb",
+									"rnbo_serial" : 6,
+									"rnbo_uniqueid" : "bg",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
 										"argnames" : 										{
@@ -532,8 +530,8 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param brgb 0.",
-									"varname" : "brgb"
+									"text" : "param bg 0. @min 0. @max 255.",
+									"varname" : "bg"
 								}
 
 							}
@@ -2014,7 +2012,7 @@
 ,
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "message_obj-25",
-									"text" : "1"
+									"text" : "0"
 								}
 
 							}
@@ -3055,7 +3053,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "1"
+									"text" : "-1"
 								}
 
 							}
@@ -3287,7 +3285,7 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1169.0, 335.0, 50.0, 23.0 ],
+									"patching_rect" : [ 1163.0, 379.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
@@ -7055,14 +7053,14 @@
 							"parsestring" : ""
 						}
 ,
-						"brgb" : 						{
-							"label" : "brgb",
+						"outputAmp" : 						{
+							"label" : "outputAmp",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"outputAmp" : 						{
-							"label" : "outputAmp",
+						"bg" : 						{
+							"label" : "bg",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7102,12 +7100,12 @@
 							}
 ,
 							"__presetid" : "e1e9fc19-def5-11ee-bc19-dca9047b09cf",
-							"brgb" : 							{
+							"outputAmp" : 							{
 								"value" : 0.0
 							}
 ,
-							"outputAmp" : 							{
-								"value" : 0.0
+							"bg" : 							{
+								"value" : 255.0
 							}
 ,
 							"myVal" : 							{
@@ -7133,12 +7131,12 @@
 										}
 ,
 										"__presetid" : "e1e9fc19-def5-11ee-bc19-dca9047b09cf",
-										"brgb" : 										{
+										"outputAmp" : 										{
 											"value" : 0.0
 										}
 ,
-										"outputAmp" : 										{
-											"value" : 0.0
+										"bg" : 										{
+											"value" : 255.0
 										}
 ,
 										"myVal" : 										{
