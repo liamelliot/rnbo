@@ -23,9 +23,6 @@ function setup() {
   textSize(96);
   fill('white');
   text("Touch to Start", windowWidth/2, windowHeight/2);
-
-  device.parametersById.get("up").value = parseFloat(255);
-  device.parametersById.get("down").value = parseFloat(0);
 }
 
 function draw() {
@@ -80,6 +77,9 @@ async function initialSetup()
     context: ctx,
     patcher
   });
+
+  device.parametersById.get("up").value = parseFloat(255);
+  device.parametersById.get("down").value = parseFloat(0);
 }
 async function setupAudio() 
 {
