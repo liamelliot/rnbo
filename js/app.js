@@ -3,50 +3,66 @@ let device;
 let ctx;
 let response;
 let patcher;
+let inconsolata;
 
-
+// preload fonts
+function preload() {
+  inconsolata = loadFont('assets/Inconsolata.otf');
+}
 
 //your p5 stuffs
 function setup() {
-  let cnv = createCanvas(400, 400);
+  let cnv = createCanvas(windowWidth, windowHeight);
   cnv.touchStarted(myTouchStarted);
   initialSetup();
   
+  background(0);
+  textAlign(CENTER, CENTER)
+  textFont(inconsolata);
+  textSize(96);
+  fill('white')
+  text("Touch to Start", windowWidth/2, windowHeight/2)
 }
 
 function draw() {
-  background(0);
-  if(alreadySetup == true){
-    device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
-    let inputAmp = device.parametersById.get("inputAmp").value
-    background(inputAmp * 255)
+  if(alreadySetup == false){
+    return;
   }
+  device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
+  let inputAmp = device.parametersById.get("inputAmp").value
+  background(inputAmp * 255)
 
+  textAlign(CENTER, CENTER)
+  textFont(inconsolata);
+  textSize(196);
+  fill('white')
+  text("Listen", windowWidth/2, 98)
+  fill('black')
+  text("Speak", windowWidth/2, windowHeight-98)
 }
 
 function mousePressed() {
-  print("hithere");
- 
-    if (alreadySetup) return;
-    alreadySetup = true;
-    ctx.resume();
+  print("mouse press detected.");
+
+  if (alreadySetup) return;
+
+  alreadySetup = true;
+  ctx.resume();
   print("async");
 	console.log("made it to run!")
 
   setupAudio();
- 
 }
 function myTouchStarted() {
-  print("hithere");
+  print("touch started");
  
-    if (alreadySetup) return;
-    alreadySetup = true;
-    ctx.resume();
+  if (alreadySetup) return;
+  alreadySetup = true;
+  ctx.resume();
   print("async");
 	console.log("made it to run!")
 
   setupAudio();
- 
 }
 
 async function initialSetup()
@@ -79,7 +95,3 @@ async function setupAudio()
     console.log(err);
   }
 }
-
-
-
-
