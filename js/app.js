@@ -25,8 +25,6 @@ function setup() {
 }
 
 function draw() {
-  background(0);
-
   if(alreadySetup == true){
     device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
     let inputAmp = device.parametersById.get("inputAmp").value
