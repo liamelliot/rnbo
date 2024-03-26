@@ -19,7 +19,7 @@ function setup() {
   background(0);
   textAlign(CENTER, CENTER)
   textFont(inconsolata);
-  textSize(196);
+  textSize(96);
   fill('white')
   text("Touch to Start", windowWidth/2, windowHeight/2)
 }
@@ -36,9 +36,9 @@ function draw() {
   textFont(inconsolata);
   textSize(196);
   fill('white')
-  text("LISTEN", windowWidth/2, 98)
+  text("Listen", windowWidth/2, 98)
   fill('black')
-  text("SPEAK", windowWidth/2, windowHeight-98)
+  text("Speak", windowWidth/2, windowHeight-98)
 }
 
 function mousePressed() {
