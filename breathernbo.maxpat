@@ -119,12 +119,36 @@
 						"title" : "untitled",
 						"boxes" : [ 							{
 								"box" : 								{
+									"format" : 0,
+									"id" : "obj-23",
+									"maxclass" : "number",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1344.0, 438.0, 50.0, 23.0 ],
+									"rnbo_classname" : "number",
+									"rnbo_extra_attributes" : 									{
+										"minimum" : "<none>",
+										"maximum" : "<none>",
+										"order" : "",
+										"preset" : 0,
+										"initialFormat" : "integer"
+									}
+,
+									"rnbo_serial" : 9,
+									"rnbo_uniqueid" : "number_obj-23"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-12",
 									"maxclass" : "newobj",
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1309.0, 455.0, 164.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 512.0, 164.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"sendinit" : 1,
@@ -2013,7 +2037,7 @@
 ,
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "message_obj-25",
-									"text" : "1"
+									"text" : "0"
 								}
 
 							}
@@ -3054,7 +3078,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "1"
+									"text" : "-1"
 								}
 
 							}
@@ -6468,6 +6492,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"source" : [ "obj-23", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-20", 0 ],
 									"source" : [ "obj-24", 0 ]
 								}
@@ -7005,7 +7036,7 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-12", 0 ],
+									"destination" : [ "obj-23", 0 ],
 									"order" : 0,
 									"source" : [ "obj-92", 0 ]
 								}
@@ -7106,7 +7137,7 @@
 							}
 ,
 							"bg" : 							{
-								"value" : 17.885554747642004
+								"value" : 141.82115597503028
 							}
 ,
 							"myVal" : 							{
@@ -7137,7 +7168,7 @@
 										}
 ,
 										"bg" : 										{
-											"value" : 17.885554747642004
+											"value" : 141.82115597503028
 										}
 ,
 										"myVal" : 										{
