@@ -14,37 +14,42 @@ function setup() {
 
 function draw() {
   background(0);
+
   if(alreadySetup == true){
     device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
     let inputAmp = device.parametersById.get("inputAmp").value
     background(inputAmp * 255)
   }
 
+  textSize(32);
+  fill('white')
+  text("LISTEN", windowWidth/2, 20)
+  fill('black')
+  text("SPEAK", windowWidth/2, windowHeight-20)
 }
 
 function mousePressed() {
-  print("hithere");
- 
-    if (alreadySetup) return;
-    alreadySetup = true;
-    ctx.resume();
+  print("mouse press detected.");
+
+  if (alreadySetup) return;
+
+  alreadySetup = true;
+  ctx.resume();
   print("async");
 	console.log("made it to run!")
 
   setupAudio();
- 
 }
 function myTouchStarted() {
-  print("hithere");
+  print("touch started");
  
-    if (alreadySetup) return;
-    alreadySetup = true;
-    ctx.resume();
+  if (alreadySetup) return;
+  alreadySetup = true;
+  ctx.resume();
   print("async");
 	console.log("made it to run!")
 
   setupAudio();
- 
 }
 
 async function initialSetup()
