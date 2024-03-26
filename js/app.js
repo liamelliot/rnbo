@@ -29,11 +29,11 @@ function draw() {
 
   textAlign(CENTER, CENTER)
   textFont(inconsolata);
-  textSize(96);
+  textSize(196);
   fill('white')
-  text("LISTEN", windowWidth/2, 48)
+  text("LISTEN", windowWidth/2, 98)
   fill('black')
-  text("SPEAK", windowWidth/2, windowHeight-48)
+  text("SPEAK", windowWidth/2, windowHeight-98)
 }
 
 function mousePressed() {
