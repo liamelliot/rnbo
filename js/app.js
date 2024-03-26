@@ -16,6 +16,12 @@ function setup() {
   cnv.touchStarted(myTouchStarted);
   initialSetup();
   
+  background(0);
+  textAlign(CENTER, CENTER)
+  textFont(inconsolata);
+  textSize(196);
+  fill('white')
+  text("Touch to Start", windowWidth/2, windowHeight/2)
 }
 
 function draw() {
@@ -29,11 +35,11 @@ function draw() {
 
   textAlign(CENTER, CENTER)
   textFont(inconsolata);
-  textSize(500);
+  textSize(196);
   fill('white')
-  text("LISTEN", windowWidth/2, 250)
+  text("LISTEN", windowWidth/2, 98)
   fill('black')
-  text("SPEAK", windowWidth/2, windowHeight-250)
+  text("SPEAK", windowWidth/2, windowHeight-98)
 }
 
 function mousePressed() {
