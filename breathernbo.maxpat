@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 921.0 ],
+		"rect" : [ 6.0, 134.0, 1852.0, 921.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -119,14 +119,33 @@
 						"title" : "untitled",
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-84",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 645.0, 584.0, 29.5, 23.0 ],
+									"rnbo_classname" : "+",
+									"rnbo_extra_attributes" : 									{
+										"hot" : 0
+									}
+,
+									"rnbo_serial" : 3,
+									"rnbo_uniqueid" : "+_obj-84",
+									"text" : "+ 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"format" : 0,
-									"id" : "obj-23",
+									"id" : "obj-81",
 									"maxclass" : "number",
 									"numinlets" : 1,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"parameter_enable" : 0,
-									"patching_rect" : [ 1344.0, 438.0, 50.0, 23.0 ],
+									"patching_rect" : [ 645.0, 630.0, 50.0, 23.0 ],
 									"rnbo_classname" : "number",
 									"rnbo_extra_attributes" : 									{
 										"minimum" : "<none>",
@@ -136,8 +155,408 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 9,
-									"rnbo_uniqueid" : "number_obj-23"
+									"rnbo_serial" : 8,
+									"rnbo_uniqueid" : "number_obj-81"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-64",
+									"maxclass" : "newobj",
+									"numinlets" : 5,
+									"numoutlets" : 4,
+									"outlettype" : [ "", "", "", "" ],
+									"patching_rect" : [ 645.0, 551.0, 61.0, 23.0 ],
+									"rnbo_classname" : "counter",
+									"rnbo_extra_attributes" : 									{
+										"inc" : 1.0
+									}
+,
+									"rnbo_serial" : 2,
+									"rnbo_uniqueid" : "counter_obj-64",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"carryflag" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set underflow/overflow output type",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"enum" : [ "numeric", "bang" ],
+												"type" : "enum",
+												"defaultValue" : "numeric"
+											}
+,
+											"input" : 											{
+												"attrOrProp" : 1,
+												"digest" : "numbers or bangs here are counted",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"direction" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set Direction: 0 = Up, 1 = Down, 2 = UpDown",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnext" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number on Next Clock",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"resetnow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Reset Counter to Number Immediately",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"maximum" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Set Maximum",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "number",
+												"defaultValue" : "9999999"
+											}
+,
+											"output" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Current Count",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"underflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Underflow (Counter Hit Minimum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"overflow" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Overflow (Counter Hit Maximum)",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number"
+											}
+,
+											"carry" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Carry Count",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"minimum" : 											{
+												"attrOrProp" : 1,
+												"digest" : "minimum",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 1,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "0"
+											}
+,
+											"inc" : 											{
+												"attrOrProp" : 2,
+												"digest" : "Increment",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "number",
+												"defaultValue" : "1"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : "bang",
+												"digest" : "numbers or bangs here are counted",
+												"hot" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "direction",
+												"type" : "number",
+												"digest" : "Set Direction: 0 = Up, 1 = Down, 2 = UpDown",
+												"docked" : 0
+											}
+, 											{
+												"name" : "resetnext",
+												"type" : [ "number", "bang" ],
+												"digest" : "Reset Counter to Number on Next Clock",
+												"docked" : 0
+											}
+, 											{
+												"name" : "resetnow",
+												"type" : [ "number", "bang" ],
+												"digest" : "Reset Counter to Number Immediately",
+												"hot" : 1,
+												"docked" : 0
+											}
+, 											{
+												"name" : "maximum",
+												"type" : "number",
+												"digest" : "Set Maximum",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "output",
+												"type" : "number",
+												"digest" : "Current Count",
+												"docked" : 0
+											}
+, 											{
+												"name" : "underflow",
+												"type" : [ "bang", "number" ],
+												"digest" : "Underflow (Counter Hit Minimum)",
+												"docked" : 0
+											}
+, 											{
+												"name" : "overflow",
+												"type" : [ "bang", "number" ],
+												"digest" : "Overflow (Counter Hit Maximum)",
+												"docked" : 0
+											}
+, 											{
+												"name" : "carry",
+												"type" : "number",
+												"digest" : "Carry Count",
+												"docked" : 0
+											}
+ ],
+										"helpname" : "counter",
+										"aliasOf" : "counter",
+										"classname" : "counter",
+										"operator" : 0,
+										"versionId" : -1448073941,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "counter 3"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 2,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 645.0, 507.0, 78.0, 23.0 ],
+									"rnbo_classname" : "metro",
+									"rnbo_extra_attributes" : 									{
+										"lock" : 0.0
+									}
+,
+									"rnbo_serial" : 2,
+									"rnbo_uniqueid" : "metro_obj-21",
+									"text" : "metro 60000"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-15",
+									"maxclass" : "toggle",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "int" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 645.0, 462.0, 24.0, 24.0 ],
+									"rnbo_classname" : "toggle",
+									"rnbo_extra_attributes" : 									{
+										"order" : "",
+										"preset" : 0
+									}
+,
+									"rnbo_serial" : 4,
+									"rnbo_uniqueid" : "toggle_obj-15"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-14",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 645.0, 425.0, 67.0, 23.0 ],
+									"rnbo_classname" : "loadmess",
+									"rnbo_serial" : 5,
+									"rnbo_uniqueid" : "loadmess_obj-14",
+									"rnboinfo" : 									{
+										"needsInstanceInfo" : 1,
+										"argnames" : 										{
+											"input" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Bang to trigger message.",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 0,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"inlet" : 1,
+												"type" : "bang"
+											}
+,
+											"message" : 											{
+												"attrOrProp" : 1,
+												"digest" : "Message when patcher is loaded.",
+												"defaultarg" : 1,
+												"isalias" : 0,
+												"aliases" : [  ],
+												"settable" : 1,
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"outlet" : 1,
+												"type" : "list",
+												"defaultValue" : ""
+											}
+,
+											"startupbang" : 											{
+												"attrOrProp" : 1,
+												"digest" : "startupbang",
+												"isalias" : 0,
+												"aliases" : [  ],
+												"attachable" : 0,
+												"isparam" : 0,
+												"deprecated" : 0,
+												"type" : "bang"
+											}
+
+										}
+,
+										"inputs" : [ 											{
+												"name" : "input",
+												"type" : "bang",
+												"digest" : "Bang to trigger message.",
+												"hot" : 1,
+												"docked" : 0
+											}
+ ],
+										"outputs" : [ 											{
+												"name" : "message",
+												"type" : "list",
+												"digest" : "Message when patcher is loaded.",
+												"defaultarg" : 1,
+												"docked" : 0
+											}
+ ],
+										"helpname" : "loadmess",
+										"aliasOf" : "loadmess",
+										"classname" : "loadmess",
+										"operator" : 0,
+										"versionId" : -361086158,
+										"changesPatcherIO" : 0
+									}
+,
+									"text" : "loadmess 1"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-41",
+									"maxclass" : "flonum",
+									"numinlets" : 1,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"parameter_enable" : 0,
+									"patching_rect" : [ 1316.0, 566.0, 50.0, 23.0 ],
+									"rnbo_classname" : "number",
+									"rnbo_extra_attributes" : 									{
+										"minimum" : "<none>",
+										"maximum" : "<none>",
+										"order" : "",
+										"preset" : 0,
+										"initialFormat" : "float"
+									}
+,
+									"rnbo_serial" : 1,
+									"rnbo_uniqueid" : "number_obj-41"
 								}
 
 							}
@@ -148,15 +567,15 @@
 									"numinlets" : 2,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1309.0, 512.0, 164.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 512.0, 70.0, 23.0 ],
 									"rnbo_classname" : "param",
 									"rnbo_extra_attributes" : 									{
 										"sendinit" : 1,
 										"displayname" : "",
 										"order" : "0",
 										"preset" : 1,
-										"value" : 0.0,
 										"steps" : 0.0,
+										"maximum" : 1.0,
 										"ctlin" : 0.0,
 										"tonormalized" : "",
 										"exponent" : 1.0,
@@ -164,10 +583,11 @@
 										"meta" : "",
 										"fromnormalized" : "",
 										"unit" : "",
+										"minimum" : 0.0,
 										"displayorder" : "-"
 									}
 ,
-									"rnbo_serial" : 7,
+									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "bg",
 									"rnboinfo" : 									{
 										"needsInstanceInfo" : 1,
@@ -555,7 +975,7 @@
 										"changesPatcherIO" : 0
 									}
 ,
-									"text" : "param bg @min 0. @max 255.",
+									"text" : "param bg 0.",
 									"varname" : "bg"
 								}
 
@@ -1855,7 +2275,7 @@
 ,
 									"rnbo_serial" : 1,
 									"rnbo_uniqueid" : "message_obj-47",
-									"text" : "4600"
+									"text" : "7331"
 								}
 
 							}
@@ -2613,7 +3033,7 @@
 ,
 									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "message_obj-142",
-									"text" : "2600"
+									"text" : "5331"
 								}
 
 							}
@@ -3320,7 +3740,7 @@
 										"initialFormat" : "float"
 									}
 ,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "number_obj-106"
 								}
 
@@ -3709,7 +4129,7 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 2,
+									"rnbo_serial" : 3,
 									"rnbo_uniqueid" : "number_obj-82"
 								}
 
@@ -3785,7 +4205,7 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 3,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "number_obj-77"
 								}
 
@@ -3922,7 +4342,7 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "number_obj-72"
 								}
 
@@ -4325,7 +4745,7 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 5,
+									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "number_obj-65"
 								}
 
@@ -5171,7 +5591,7 @@
 										"initialFormat" : "integer"
 									}
 ,
-									"rnbo_serial" : 6,
+									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "number_obj-33"
 								}
 
@@ -6267,6 +6687,15 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-103", 3 ],
+									"order" : 1,
+									"source" : [ "obj-102", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-12", 0 ],
+									"order" : 0,
 									"source" : [ "obj-102", 0 ]
 								}
 
@@ -6291,6 +6720,13 @@
 									"destination" : [ "obj-131", 1 ],
 									"order" : 1,
 									"source" : [ "obj-111", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-41", 0 ],
+									"source" : [ "obj-12", 0 ]
 								}
 
 							}
@@ -6385,6 +6821,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-15", 0 ],
+									"source" : [ "obj-14", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-142", 1 ],
 									"source" : [ "obj-140", 0 ]
 								}
@@ -6448,6 +6891,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-21", 0 ],
+									"source" : [ "obj-15", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-134", 1 ],
 									"source" : [ "obj-150", 0 ]
 								}
@@ -6492,8 +6942,8 @@
 							}
 , 							{
 								"patchline" : 								{
-									"destination" : [ "obj-12", 0 ],
-									"source" : [ "obj-23", 0 ]
+									"destination" : [ "obj-64", 0 ],
+									"source" : [ "obj-21", 0 ]
 								}
 
 							}
@@ -6842,6 +7292,13 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-84", 0 ],
+									"source" : [ "obj-64", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-63", 0 ],
 									"source" : [ "obj-65", 0 ]
 								}
@@ -6975,8 +7432,22 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-111", 1 ],
+									"source" : [ "obj-81", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-83", 0 ],
 									"source" : [ "obj-82", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-81", 0 ],
+									"source" : [ "obj-84", 0 ]
 								}
 
 							}
@@ -6997,7 +7468,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-102", 0 ],
-									"order" : 1,
+									"order" : 0,
 									"source" : [ "obj-92", 0 ]
 								}
 
@@ -7005,7 +7476,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-103", 2 ],
-									"order" : 2,
+									"order" : 1,
 									"source" : [ "obj-92", 0 ]
 								}
 
@@ -7013,7 +7484,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-103", 1 ],
-									"order" : 3,
+									"order" : 2,
 									"source" : [ "obj-92", 0 ]
 								}
 
@@ -7021,7 +7492,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-103", 0 ],
-									"order" : 4,
+									"order" : 3,
 									"source" : [ "obj-92", 0 ]
 								}
 
@@ -7029,15 +7500,7 @@
 , 							{
 								"patchline" : 								{
 									"destination" : [ "obj-106", 0 ],
-									"order" : 5,
-									"source" : [ "obj-92", 0 ]
-								}
-
-							}
-, 							{
-								"patchline" : 								{
-									"destination" : [ "obj-23", 0 ],
-									"order" : 0,
+									"order" : 4,
 									"source" : [ "obj-92", 0 ]
 								}
 
@@ -7085,14 +7548,14 @@
 							"parsestring" : ""
 						}
 ,
-						"outputAmp" : 						{
-							"label" : "outputAmp",
+						"bg" : 						{
+							"label" : "bg",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
 ,
-						"bg" : 						{
-							"label" : "bg",
+						"outputAmp" : 						{
+							"label" : "outputAmp",
 							"isEnum" : 0,
 							"parsestring" : ""
 						}
@@ -7137,7 +7600,7 @@
 							}
 ,
 							"bg" : 							{
-								"value" : 141.82115597503028
+								"value" : 1.0
 							}
 ,
 							"myVal" : 							{
@@ -7168,7 +7631,7 @@
 										}
 ,
 										"bg" : 										{
-											"value" : 141.82115597503028
+											"value" : 1.0
 										}
 ,
 										"myVal" : 										{
