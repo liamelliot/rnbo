@@ -3,11 +3,11 @@ let device;
 let ctx;
 let response;
 let patcher;
-let fontBold;
+let inconsolata;
 
 // preload fonts
 function preload() {
-  fontBold = loadFont('assets/Bold.ttf');
+  inconsolata = loadFont('assets/inconsolata.otf');
 }
 
 //your p5 stuffs
@@ -28,7 +28,7 @@ function draw() {
   }
 
   textAlign(CENTER, CENTER)
-  textFont(fontBold);
+  textFont(inconsolata);
   textSize(96);
   fill('white')
   text("LISTEN", windowWidth/2, 48)
