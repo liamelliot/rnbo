@@ -84,6 +84,7 @@ async function initialSetup()
 
   device.parameterChangeEvent.subscribe((param) => {
     let id = param.id;
+    console.log(id);
     if(id == "outputBG") {
       console.log(param.value);
     }
