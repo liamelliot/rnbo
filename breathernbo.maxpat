@@ -3621,7 +3621,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "1"
+									"text" : "-1"
 								}
 
 							}
@@ -4139,7 +4139,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1309.0, 250.0, 46.0, 23.0 ],
+									"patching_rect" : [ 1309.0, 250.0, 29.5, 23.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -4147,7 +4147,7 @@
 ,
 									"rnbo_serial" : 7,
 									"rnbo_uniqueid" : "message_obj-96",
-									"text" : "0 3000"
+									"text" : "0"
 								}
 
 							}
@@ -4158,7 +4158,7 @@
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 1226.0, 250.0, 60.0, 23.0 ],
+									"patching_rect" : [ 1226.0, 250.0, 29.5, 23.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -4166,7 +4166,7 @@
 ,
 									"rnbo_serial" : 8,
 									"rnbo_uniqueid" : "message_obj-94",
-									"text" : "255 3000"
+									"text" : "255"
 								}
 
 							}
@@ -4177,15 +4177,11 @@
 									"numinlets" : 3,
 									"numoutlets" : 2,
 									"outlettype" : [ "", "" ],
-									"patching_rect" : [ 1226.0, 335.0, 40.0, 23.0 ],
+									"patching_rect" : [ 1226.0, 335.0, 58.0, 23.0 ],
 									"rnbo_classname" : "line",
-									"rnbo_extra_attributes" : 									{
-										"initial" : 0.0
-									}
-,
-									"rnbo_serial" : 1,
+									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "line_obj-92",
-									"text" : "line"
+									"text" : "line 3000"
 								}
 
 							}
