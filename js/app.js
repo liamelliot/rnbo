@@ -3,6 +3,12 @@ let device;
 let ctx;
 let response;
 let patcher;
+let fontBold;
+
+// preload fonts
+function preload() {
+  fontBold = loadFont('assets/Bold.ttf');
+}
 
 //your p5 stuffs
 function setup() {
@@ -22,11 +28,12 @@ function draw() {
   }
 
   textAlign(CENTER, CENTER)
+  textFont(fontBold);
   textSize(96);
   fill('white')
-  text("LISTEN", windowWidth/2, 20)
+  text("LISTEN", windowWidth/2, 48)
   fill('black')
-  text("SPEAK", windowWidth/2, windowHeight-20)
+  text("SPEAK", windowWidth/2, windowHeight-48)
 }
 
 function mousePressed() {
