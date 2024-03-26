@@ -4,11 +4,9 @@ let ctx;
 let response;
 let patcher;
 
-
-
 //your p5 stuffs
 function setup() {
-  let cnv = createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   cnv.touchStarted(myTouchStarted);
   initialSetup();
   
@@ -79,7 +77,3 @@ async function setupAudio()
     console.log(err);
   }
 }
-
-
-
-
