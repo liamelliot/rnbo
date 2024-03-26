@@ -21,6 +21,7 @@ function draw() {
     background(inputAmp * 255)
   }
 
+  textAlign(CENTER, CENTER)
   textSize(32);
   fill('white')
   text("LISTEN", windowWidth/2, 20)
