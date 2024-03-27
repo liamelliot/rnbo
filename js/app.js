@@ -58,7 +58,7 @@ function draw() {
     return;
   }
 
-  metro = device.parametersById.get("metro").value;
+  //metro = device.parametersById.get("metro").value;
   //console.log("metro");
   //console.log(metro);
   metro = 8000;
