@@ -98,7 +98,7 @@ async function initialSetup()
   });
 
   metro = device.parametersById.get("up").value;
-  perFrame = metro / frameRate();
+  perFrame = 1000 / frameRate();
 
   device.parametersById.get("up").value = parseFloat(255);
   device.parametersById.get("down").value = parseFloat(0);
