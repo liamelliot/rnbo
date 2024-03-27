@@ -103,14 +103,14 @@ function draw() {
   image(img, windowWidth/2, windowHeight/2);
   img.resize(windowWidth/2,0);
   //console.log(img.width);
-  //img.resize(img.width*inputAmp*2,0);
+  img.resize(img.width*inputAmp*2,0);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(196);
   fill('white');
   text("Listen", windowWidth/2, 118);
-  text(String(inputAmp.toFixed(1)), windowWidth/2, windowHeight/2);
+  //text(String(inputAmp.toFixed(1)), windowWidth/2, windowHeight/2);
   fill('black');
   text("Speak", windowWidth/2, windowHeight-118);
 }
