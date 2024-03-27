@@ -162,7 +162,7 @@ async function initialSetup()
   });
 
   gain = ctx.createGain();
-  gain.gain.setValueAtTime(5, ctx.currentTime);
+  gain.gain.setValueAtTime(9, ctx.currentTime);
 }
 
 async function setupAudio() 
