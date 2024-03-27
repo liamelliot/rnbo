@@ -100,15 +100,19 @@ function draw() {
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
-  image(img, windowWidth/2, windowHeight/2);
+  //image(img, windowWidth/2, windowHeight/2);
   //img.resize(windowWidth/2,0);
   //console.log(img.width);
-  img.resize(windowWidth*inputAmp,0);
+  //img.resize(windowWidth*inputAmp,0);
+  fill('white');
+  let rad = Math.floor(windowWidth/2.5)*inputAmp;
+  let halfW = windowWidth/2;
+  strokeWeight(10*inputAmp);
+  line(halfW-rad, windowHeight/2, halfW+rad, windowHeight/2);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(196);
-  fill('white');
   text("Listen", windowWidth/2, 118);
   //text(String(inputAmp.toFixed(1)), windowWidth/2, windowHeight/2);
   fill('black');
