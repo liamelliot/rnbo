@@ -56,6 +56,10 @@ function draw() {
     return;
   }
 
+  metro = device.parametersById.get("metro").value;
+  console.log("metro");
+  console.log(metro);
+
   // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
 
   if(record){
