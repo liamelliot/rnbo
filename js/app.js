@@ -102,6 +102,7 @@ function draw() {
   let inputAmp = device.parametersById.get("inputAmp").value;
   image(img, windowWidth/2, windowHeight/2);
   img.resize(windowWidth/2,0);
+  console.log(img.width);
   // img.resize(img.width*inputAmp*2,0);
 
   textAlign(CENTER, CENTER);
