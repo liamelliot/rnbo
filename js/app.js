@@ -91,7 +91,7 @@ function draw() {
       count -= perFrame;
     }
   }
-  background(Math.floor(count / transition * 255));
+  //background(Math.floor(count / transition * 255));
 
   bg = device.parametersById.get("outputBG").value;
   //console.log(device.parametersById.get("test").value);
