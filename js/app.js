@@ -41,7 +41,8 @@ function setup() {
     }
   );
 
-  perFrame = 1000 / frameRate();
+  perFrame = 1000.0 / frameRate();
+  console.log("frame rate", frameRate());
   console.log("frame increment", perFrame);
   
   background(0);
