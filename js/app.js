@@ -99,6 +99,8 @@ async function initialSetup()
   });
 
   metro = device.parametersById.get("metro").value;
+  console.log("metro");
+  console.log(metro);
   perFrame = 1000 / frameRate();
 
   device.parametersById.get("up").value = parseFloat(255);
