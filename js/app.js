@@ -20,6 +20,22 @@ function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.touchStarted(myTouchStarted);
   initialSetup();
+
+  metro = device.parametersById.get("metro").value;
+  console.log("metro");
+  console.log(metro);
+  perFrame = 1000 / frameRate();
+
+  device.parametersById.get("up").value = parseFloat(255);
+  device.parametersById.get("down").value = parseFloat(0);
+
+  device.parameterChangeEvent.subscribe((param) => {
+    let id = param.id;
+    console.log(id);
+    if(id == "outputBG") {
+      console.log(param.value);
+    }
+  });
   
   background(0);
   textAlign(CENTER, CENTER);
@@ -97,23 +113,8 @@ async function initialSetup()
     context: ctx,
     patcher
   });
-
-  metro = device.parametersById.get("metro").value;
-  console.log("metro");
-  console.log(metro);
-  perFrame = 1000 / frameRate();
-
-  device.parametersById.get("up").value = parseFloat(255);
-  device.parametersById.get("down").value = parseFloat(0);
-
-  device.parameterChangeEvent.subscribe((param) => {
-    let id = param.id;
-    console.log(id);
-    if(id == "outputBG") {
-      console.log(param.value);
-    }
-  });
 }
+
 async function setupAudio() 
 {
   try {
