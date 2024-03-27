@@ -63,12 +63,16 @@ function draw() {
     return;
   }
 
-  //metro = device.parametersById.get("metro").value;
-  //console.log("metro");
-  //console.log(metro);
+  metro = parseFloat(device.parametersById.get("metro").value);
+  console.log("metro");
+  console.log(metro);
   metro = 8000;
   
   perFrame = 1000.0 / frameRate();
+
+  let playbackRate = parseFloat(device.parametersById.get("playbackRate").value);
+  console.log("playback rate: ", playbackRate)
+
 
   // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
 
