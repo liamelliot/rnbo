@@ -107,7 +107,7 @@ function draw() {
   stroke('white');
   let rad = Math.floor(windowWidth/3)*inputAmp + 20;
   let halfW = windowWidth/2;
-  strokeWeight(10*inputAmp);
+  strokeWeight(9*inputAmp+2);
   line(halfW-rad, windowHeight/2, halfW+rad, windowHeight/2);
 
   textAlign(CENTER, CENTER);
