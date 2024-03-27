@@ -95,11 +95,11 @@ function draw() {
       count -= perFrame;
     }
   }
-  background(Math.floor(count / transition * 255));
-  //bg = device.parametersById.get("outputBG").value;
+  //background(Math.floor(count / transition * 255));
+  bg = parseFloat(device.parametersById.get("outputBG").value);
   //console.log(device.parametersById.get("test").value);
-  //console.log(bg);
-  //background(Math.floor(bg)*255);
+  console.log("bg", bg);
+  background(Math.floor(bg)*255);
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
