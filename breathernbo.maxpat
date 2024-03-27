@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1852.0, 921.0 ],
+		"rect" : [ -31958.0, -31915.0, 1852.0, 921.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -4972,11 +4972,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-130",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 384.0, 988.0, 50.0, 23.0 ],
+									"patching_rect" : [ 384.0, 988.0, 50.0, 37.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -4984,7 +4985,7 @@
 ,
 									"rnbo_serial" : 8,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "-0.8"
+									"text" : "-0.888889"
 								}
 
 							}
