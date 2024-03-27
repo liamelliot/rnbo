@@ -110,7 +110,7 @@ function draw() {
   textSize(196);
   fill('white');
   text("Listen", windowWidth/2, 118);
-  text(String(inputAmp), windowWidth/2, windowHeight/2);
+  text(String(inputAmp.toFixed(1)), windowWidth/2, windowHeight/2);
   fill('black');
   text("Speak", windowWidth/2, windowHeight-118);
 }
