@@ -1,6 +1,7 @@
 let alreadySetup = false;
 let device;
 let ctx;
+let gain;
 let response;
 let patcher;
 let inconsolata;
@@ -95,11 +96,11 @@ function draw() {
       count -= perFrame;
     }
   }
-  //background(Math.floor(count / transition * 255));
-  bg = parseFloat(device.parametersById.get("outputBG").value);
+  background(Math.floor(count / transition * 255));
+  //bg = parseFloat(device.parametersById.get("outputBG").value);
   //console.log(device.parametersById.get("test").value);
-  console.log("bg", bg);
-  background(Math.floor(bg)*255);
+  //console.log("bg", bg);
+  //background(Math.floor(bg)*255);
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
@@ -159,6 +160,9 @@ async function initialSetup()
     context: ctx,
     patcher
   });
+
+  gain = ctx.createGain();
+  gain.gain.setValueAtTime(1, ctx.currentTime);
 }
 
 async function setupAudio() 
@@ -174,7 +178,9 @@ async function setupAudio()
     source.connect(device.node);
     
     // Connect RNBO Device to destination output
-    device.node.connect(ctx.destination);
+    device.node.connect(gain);
+    gain.connect(ctx.destination);
+    //device.node.connect(ctx.destination);
     
   } catch (err) {
     console.log(err);
