@@ -75,7 +75,7 @@ function draw() {
       record = false;
     }
 
-    if(count <= transition){
+    if(count <= transition && globalCount >= metro-transition){
       count += perFrame;
     }
   } else{
@@ -84,7 +84,7 @@ function draw() {
       record = true;
     }
 
-    if(count >= 0){
+    if(count >= 0 && globalCount <= transition){
       count -= perFrame;
     }
   }
