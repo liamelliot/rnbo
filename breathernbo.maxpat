@@ -88,7 +88,7 @@
 						}
 ,
 						"classnamespace" : "rnbo",
-						"rect" : [ 34.0, 77.0, 1852.0, 921.0 ],
+						"rect" : [ 34.0, 77.0, 1452.0, 921.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -141,9 +141,9 @@
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 208.5, 1299.0, 33.0, 23.0 ],
 									"rnbo_classname" : "*~",
-									"rnbo_serial" : 3,
+									"rnbo_serial" : 4,
 									"rnbo_uniqueid" : "*~_obj-90",
-									"text" : "*~ 3."
+									"text" : "*~ 4."
 								}
 
 							}
@@ -4394,7 +4394,7 @@
 ,
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "message_obj-25",
-									"text" : "1"
+									"text" : "0"
 								}
 
 							}
@@ -5427,11 +5427,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-130",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 384.0, 988.0, 50.0, 23.0 ],
+									"patching_rect" : [ 384.0, 988.0, 50.0, 37.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -5439,7 +5440,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "1"
+									"text" : "-0.888889"
 								}
 
 							}
@@ -9552,7 +9553,7 @@
 							}
 ,
 							"outputBG" : 							{
-								"value" : 0.052251357053717
+								"value" : 0.493485802084208
 							}
 ,
 							"down" : 							{
@@ -9599,7 +9600,7 @@
 										}
 ,
 										"outputBG" : 										{
-											"value" : 0.052251357053717
+											"value" : 0.493485802084208
 										}
 ,
 										"down" : 										{
