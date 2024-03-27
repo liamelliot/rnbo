@@ -98,6 +98,7 @@ function draw() {
   //console.log(bg);
   //background(Math.floor(bg)*255);
 
+  imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
   image(img, windowWidth/2, windowHeight/2);
   img.resize(windowWidth/2,0);
