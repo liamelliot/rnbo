@@ -8,6 +8,7 @@ let bg;
 let metro;
 let record = true;
 let count = 0;
+let perFrame;
 
 // preload fonts
 function preload() {
