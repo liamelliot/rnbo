@@ -5,6 +5,9 @@ let response;
 let patcher;
 let inconsolata;
 let bg;
+let metro;
+let record = true;
+let count = 0;
 
 // preload fonts
 function preload() {
@@ -29,11 +32,26 @@ function draw() {
   if(alreadySetup == false){
     return;
   }
-  device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
+
+  // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
+
+  if(record){
+    count += perFrame;
+    if(count >= metro){
+      record = false;
+    }
+  } else{
+    count -= perFrame;
+    if(count <= 0){
+      record = true;
+    }
+  }
+  background(Math.floor(count / metro * 255));
+
   bg = device.parametersById.get("outputBG").value;
   //console.log(device.parametersById.get("test").value);
   //console.log(bg);
-  background(Math.floor(bg)*255);
+  //background(Math.floor(bg)*255);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
@@ -78,6 +96,9 @@ async function initialSetup()
     context: ctx,
     patcher
   });
+
+  metro = device.parametersById.get("up").value;
+  perFrame = metro / frameRate();
 
   device.parametersById.get("up").value = parseFloat(255);
   device.parametersById.get("down").value = parseFloat(0);
