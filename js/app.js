@@ -19,23 +19,29 @@ function preload() {
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.touchStarted(myTouchStarted);
-  initialSetup();
+  initialSetup().then(
+    function(value) {
+      metro = device.parametersById.get("metro").value;
+      console.log("metro");
+      console.log(metro);
 
-  metro = device.parametersById.get("metro").value;
-  console.log("metro");
-  console.log(metro);
-  perFrame = 1000 / frameRate();
+      device.parametersById.get("up").value = parseFloat(255);
+      device.parametersById.get("down").value = parseFloat(0);
 
-  device.parametersById.get("up").value = parseFloat(255);
-  device.parametersById.get("down").value = parseFloat(0);
-
-  device.parameterChangeEvent.subscribe((param) => {
-    let id = param.id;
-    console.log(id);
-    if(id == "outputBG") {
-      console.log(param.value);
+      device.parameterChangeEvent.subscribe((param) => {
+        let id = param.id;
+        console.log(id);
+        if(id == "outputBG") {
+          console.log(param.value);
+        }
+      });
+    },
+    function(error) {
+      console.log("error");
     }
-  });
+  );
+
+  perFrame = 1000 / frameRate();
   
   background(0);
   textAlign(CENTER, CENTER);
