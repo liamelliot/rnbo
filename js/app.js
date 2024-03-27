@@ -42,6 +42,7 @@ function setup() {
   );
 
   perFrame = 1000 / frameRate();
+  console.log("frame increment", perFrame);
   
   background(0);
   textAlign(CENTER, CENTER);
