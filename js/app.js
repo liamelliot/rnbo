@@ -91,7 +91,7 @@ function draw() {
       count -= perFrame;
     }
   }
-  //background(Math.floor(count / transition * 255));
+  background(Math.floor(count / transition * 255));
 
   bg = device.parametersById.get("outputBG").value;
   //console.log(device.parametersById.get("test").value);
@@ -101,7 +101,7 @@ function draw() {
   let inputAmp = device.parametersById.get("inputAmp").value;
   image(img, windowWidth/2, windowHeight/2);
   img.resize(windowWidth/2,0);
-  //img.resize(img.width*inputAmp,0);
+  img.resize(img.width*inputAmp,0);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
