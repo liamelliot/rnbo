@@ -100,17 +100,17 @@ function draw() {
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
-  // image(img, windowWidth/2, windowHeight/2);
-  // img.resize(windowWidth/2,0);
+  image(img, windowWidth/2, windowHeight/2);
+  img.resize(windowWidth/2,0);
   // img.resize(img.width*inputAmp*2,0);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(196);
   fill('white');
-  text("Listen", windowWidth/2, 98);
+  text("Listen", windowWidth/2, 118);
   fill('black');
-  text("Speak", windowWidth/2, windowHeight-98);
+  text("Speak", windowWidth/2, windowHeight-118);
 }
 
 function mousePressed() {
