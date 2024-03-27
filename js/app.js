@@ -97,7 +97,7 @@ async function initialSetup()
     patcher
   });
 
-  metro = device.parametersById.get("up").value;
+  metro = device.parametersById.get("metro").value;
   perFrame = 1000 / frameRate();
 
   device.parametersById.get("up").value = parseFloat(255);
