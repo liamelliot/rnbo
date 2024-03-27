@@ -11,6 +11,7 @@ let count = 0;
 let globalCount = 0;
 let perFrame;
 let transition = 3000;
+let connected = false;
 
 // preload fonts
 function preload() {
@@ -56,7 +57,7 @@ function setup() {
 }
 
 function draw() {
-  if(alreadySetup == false){
+  if(alreadySetup == false || connected == false){
     return;
   }
 
@@ -126,6 +127,7 @@ function myTouchStarted() {
 	console.log("made it to run!");
 
   setupAudio();
+  connected = true;
 }
 
 async function initialSetup()
