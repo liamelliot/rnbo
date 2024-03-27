@@ -33,13 +33,13 @@ function setup() {
       device.parametersById.get("up").value = parseFloat(255);
       device.parametersById.get("down").value = parseFloat(0);
 
-      device.parameterChangeEvent.subscribe((param) => {
-        let id = param.id;
-        console.log(id);
-        if(id == "outputBG") {
-          console.log(param.value);
-        }
-      });
+      // device.parameterChangeEvent.subscribe((param) => {
+      //   let id = param.id;
+      //   console.log(id);
+      //   if(id == "outputBG") {
+      //     console.log(param.value);
+      //   }
+      // });
     },
     function(error) {
       console.log("error");
