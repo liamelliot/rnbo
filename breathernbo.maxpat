@@ -561,9 +561,9 @@
 									"outlettype" : [ "signal" ],
 									"patching_rect" : [ 208.5, 1299.0, 33.0, 23.0 ],
 									"rnbo_classname" : "*~",
-									"rnbo_serial" : 4,
+									"rnbo_serial" : 5,
 									"rnbo_uniqueid" : "*~_obj-90",
-									"text" : "*~ 4."
+									"text" : "*~ 3."
 								}
 
 							}
@@ -4802,11 +4802,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-25",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 84.0, 1180.0, 50.0, 23.0 ],
+									"patching_rect" : [ 84.0, 1180.0, 50.0, 37.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -4814,7 +4815,7 @@
 ,
 									"rnbo_serial" : 2,
 									"rnbo_uniqueid" : "message_obj-25",
-									"text" : "1.5"
+									"text" : "-0.666667"
 								}
 
 							}
@@ -5847,11 +5848,12 @@
 , 							{
 								"box" : 								{
 									"id" : "obj-130",
+									"linecount" : 2,
 									"maxclass" : "message",
 									"numinlets" : 2,
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
-									"patching_rect" : [ 384.0, 988.0, 50.0, 23.0 ],
+									"patching_rect" : [ 384.0, 988.0, 50.0, 37.0 ],
 									"rnbo_classname" : "message",
 									"rnbo_extra_attributes" : 									{
 										"text" : ""
@@ -5859,7 +5861,7 @@
 ,
 									"rnbo_serial" : 6,
 									"rnbo_uniqueid" : "message_obj-130",
-									"text" : "1.5"
+									"text" : "-0.666667"
 								}
 
 							}
@@ -9970,7 +9972,7 @@
 							}
 ,
 							"playbackRate" : 							{
-								"value" : 1.0
+								"value" : 0.0
 							}
 ,
 							"outputAmp" : 							{
@@ -9986,7 +9988,7 @@
 							}
 ,
 							"outputBG" : 							{
-								"value" : 0.25
+								"value" : 0.086595401535431
 							}
 ,
 							"up" : 							{
@@ -10021,7 +10023,7 @@
 										}
 ,
 										"playbackRate" : 										{
-											"value" : 1.0
+											"value" : 0.0
 										}
 ,
 										"outputAmp" : 										{
@@ -10037,7 +10039,7 @@
 										}
 ,
 										"outputBG" : 										{
-											"value" : 0.25
+											"value" : 0.086595401535431
 										}
 ,
 										"up" : 										{
