@@ -103,7 +103,7 @@ function draw() {
   //img.resize(windowWidth/2,0);
   //console.log(img.width);
   //img.resize(windowWidth*inputAmp,0);
-  fill('white');
+  stroke('white');
   let rad = Math.floor(windowWidth/3)*inputAmp + 20;
   let halfW = windowWidth/2;
   strokeWeight(10*inputAmp);
