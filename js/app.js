@@ -8,7 +8,9 @@ let bg;
 let metro;
 let record = true;
 let count = 0;
+let globalCount = 0;
 let perFrame;
+let transition = 3000;
 
 // preload fonts
 function preload() {
@@ -62,22 +64,31 @@ function draw() {
   //console.log("metro");
   //console.log(metro);
   metro = 8000;
+  
   perFrame = 1000.0 / frameRate();
 
   // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
 
   if(record){
-    count += perFrame;
-    if(count >= metro){
+    globalCount += perFrame;
+    if(globalCount >= metro){
       record = false;
     }
+
+    if(count <= transition){
+      count += perFrame;
+    }
   } else{
-    count -= perFrame;
-    if(count <= 0){
+    globalCount -= perFrame;
+    if(globalCount <= 0){
       record = true;
     }
+
+    if(count >= 0){
+      count -= perFrame;
+    }
   }
-  background(Math.floor(count / metro * 255));
+  background(Math.floor(count / transition * 255));
 
   bg = device.parametersById.get("outputBG").value;
   //console.log(device.parametersById.get("test").value);
