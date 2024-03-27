@@ -12,10 +12,12 @@ let globalCount = 0;
 let perFrame;
 let transition = 3000;
 let connected = false;
+let img;
 
 // preload fonts
 function preload() {
   inconsolata = loadFont('assets/Inconsolata.otf');
+  img = loadImage('assets/squiggle2.png');
 }
 
 //your p5 stuffs
@@ -95,6 +97,10 @@ function draw() {
   //console.log(device.parametersById.get("test").value);
   //console.log(bg);
   //background(Math.floor(bg)*255);
+
+  let inputAmp = device.parametersById.get("inputAmp").value;
+  image(img, windowWidth/2, windowHeight/2);
+  img.resize(img.width*inputAmp,0);
 
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
