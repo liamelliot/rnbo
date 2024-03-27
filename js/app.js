@@ -42,8 +42,8 @@ function setup() {
   );
 
   perFrame = 1000.0 / frameRate();
-  console.log("frame rate", frameRate());
-  console.log("frame increment", perFrame);
+  // console.log("frame rate", frameRate());
+  // console.log("frame increment", perFrame);
   
   background(0);
   textAlign(CENTER, CENTER);
@@ -62,6 +62,7 @@ function draw() {
   //console.log("metro");
   //console.log(metro);
   metro = 8000;
+  perFrame = 1000.0 / frameRate();
 
   // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
 
