@@ -65,13 +65,13 @@ function draw() {
   }
 
   metro = parseFloat(device.parametersById.get("metro").value);
-  console.log("metro", metro);
+  //console.log("metro", metro);
   metro = 8000;
   
   perFrame = 1000.0 / frameRate();
 
   let playbackRate = parseFloat(device.parametersById.get("playbackRate").value);
-  console.log("playback rate: ", playbackRate)
+  //console.log("playback rate: ", playbackRate)
 
 
   // device.parametersById.get("myVal").value = parseFloat(mouseX)/width;
@@ -103,14 +103,14 @@ function draw() {
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
-  console.log("input amp", inputAmp);
+  //console.log("input amp", inputAmp);
   //image(img, windowWidth/2, windowHeight/2);
   //img.resize(windowWidth/2,0);
   //console.log(img.width);
   //img.resize(windowWidth*inputAmp,0);
   fill("white");
   stroke('white');
-  let rad = Math.floor(windowWidth/3)*inputAmp + 20;
+  let rad = Math.floor(windowWidth/2.5)*inputAmp + 30;
   let halfW = windowWidth/2;
   strokeWeight(9*inputAmp+2);
   line(halfW-rad, windowHeight/2, halfW+rad, windowHeight/2);
