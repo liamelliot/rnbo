@@ -118,11 +118,11 @@ function draw() {
   textAlign(CENTER, CENTER);
   textFont(inconsolata);
   textSize(196);
-  text("Listen", windowWidth/2, 118);
+  text("Listening", windowWidth/2, 118);
   //text(String(inputAmp.toFixed(1)), windowWidth/2, windowHeight/2);
   stroke("black");
   fill('black');
-  text("Speak", windowWidth/2, windowHeight-118);
+  text("Ringing", windowWidth/2, windowHeight-118);
 }
 
 function mousePressed() {
