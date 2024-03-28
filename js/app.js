@@ -65,8 +65,7 @@ function draw() {
   }
 
   metro = parseFloat(device.parametersById.get("metro").value);
-  console.log("metro");
-  console.log(metro);
+  console.log("metro", metro);
   metro = 8000;
   
   perFrame = 1000.0 / frameRate();
@@ -104,6 +103,7 @@ function draw() {
 
   imageMode(CENTER);
   let inputAmp = device.parametersById.get("inputAmp").value;
+  console.log("input amp", inputAmp);
   //image(img, windowWidth/2, windowHeight/2);
   //img.resize(windowWidth/2,0);
   //console.log(img.width);
